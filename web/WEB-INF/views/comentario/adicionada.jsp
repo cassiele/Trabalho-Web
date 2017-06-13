@@ -9,10 +9,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Topicos</title>
     </head>
     <body>
-        <h1>Tarefa adicionada com sucesso.</h1>
+        <h1>Novo topico adicionado com sucesso</h1>
     </body>
-    <td><a href="listaTarefas">Ir para Lista de Tarefas</a></td>
+    <td><a href="listaTopicos">Ir para Lista de Topicos</a></td>
 </html>

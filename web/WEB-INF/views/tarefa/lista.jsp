@@ -10,7 +10,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Lista Principal</title>
         <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
 
     </head>
@@ -39,7 +39,8 @@
       value="${tarefa.dataFinalizacao.time}" 
       pattern="dd/MM/yyyy" /></td>
           <td><a href="removeTarefa?id=${tarefa.id}">Remover</a></td>
-          <td><a href="mostraTarefa?id=${tarefa.id}">Alterar</a></td>
+          <td><a href="mostraTarefa?id=${tarefa.id}">Editar</a></td>
+          <td><a href="comentarTarefa?id=${tarefa.id}">Comentar</a></td>
           <td>
               <c:if test="${tarefa.finalizado eq false}">
                   <a href="#" onclick="finalizaAgora(${tarefa.id})">Finalizar</a>
@@ -47,6 +48,7 @@
           </td>  
       </tr>
   </c:forEach>
+      <br>
    </table>
 
         <script type="text/javascript">
@@ -64,6 +66,6 @@
       });
             }
         </script>
-        <td><a href="novaTarefa">Adicionar Nova Tarefa</a></td>
+        <td><a href="adicionaTarefa">Adicionar Novo tópico </a></td>
     </body>
 </html>

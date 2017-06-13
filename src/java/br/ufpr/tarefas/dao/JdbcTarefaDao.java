@@ -9,6 +9,7 @@ import br.ufpr.tarefas.jdbc.MysqlConnectionFactory;
 import br.ufpr.tarefas.model.Tarefa;
 import java.sql.Connection;
 import java.sql.Date;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -21,7 +22,7 @@ import java.util.List;
  * @author CCE
  */
 public class JdbcTarefaDao {
-
+/*
     private Connection connection;
 
     public JdbcTarefaDao() {
@@ -35,8 +36,8 @@ public class JdbcTarefaDao {
             PreparedStatement stmt = connection.prepareStatement(sql);
             stmt.setString(1, tarefa.getDescricao());
             stmt.setBoolean(2, false);
+           
 //            stmt.setDate(3, new Date(tarefa.getDataFinalizacao().getTimeInMillis()));
-
             // executa
             stmt.execute();
             stmt.close();
@@ -59,6 +60,8 @@ public class JdbcTarefaDao {
                 tarefa.setId(rs.getLong("id"));
                 tarefa.setDescricao(rs.getString("descricao"));
                 tarefa.setFinalizado(rs.getBoolean("finalizado"));
+                
+                
 
                 criarDataNascimento(rs, tarefa);
 
@@ -113,6 +116,7 @@ public class JdbcTarefaDao {
                 tarefa.setId(rs.getLong("id"));
                 tarefa.setDescricao(rs.getString("descricao"));
                 tarefa.setFinalizado(rs.getBoolean("finalizado"));
+           
                 if (rs.getDate("dataFinalizacao") != null){
                     Calendar dataFinalizacao = Calendar.getInstance();
                     dataFinalizacao.setTimeInMillis(rs.getDate("dataFinalizacao").getTime());
@@ -134,17 +138,13 @@ public class JdbcTarefaDao {
 
         try {
             PreparedStatement stmt = connection.prepareStatement(sql);
-
             stmt.setLong(1, tarefa.getId());
-
             stmt.execute();
             stmt.close();
-
         } catch (SQLException e) {
             e.printStackTrace();
             throw new RuntimeException(e);
         }
-
     }
 
     public Tarefa buscaPorId(Long id) {
@@ -154,8 +154,7 @@ public class JdbcTarefaDao {
             stmt.setLong(1, id);
             ResultSet rs = stmt.executeQuery();
                 Tarefa tarefa = new Tarefa();
-            if (rs.next()) {
-                
+            if (rs.next()) {                
                 tarefa.setId(rs.getLong("id"));
                 tarefa.setDescricao(rs.getString("descricao"));
                 tarefa.setFinalizado(rs.getBoolean("finalizado"));
@@ -176,24 +175,20 @@ public class JdbcTarefaDao {
 
     public void altera(Tarefa tarefa) {
          String sql = "update tarefas set descricao=?, finalizado=?, dataFinalizacao=?"+
-                 " where id = "+tarefa.getId();
-         
+                 " where id = "+tarefa.getId();        
          try {
             PreparedStatement stmt = connection.prepareStatement(sql);
             stmt.setString(1, tarefa.getDescricao());
             stmt.setBoolean(2, tarefa.isFinalizado());
             stmt.setDate(3, new Date(tarefa.getDataFinalizacao().getTimeInMillis()));
-
             // executa
             stmt.execute();
             stmt.close();
-
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
             throw new RuntimeException(e);
         }
-    
     }
-
+*/
 }

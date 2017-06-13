@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 /**
  *
  * @author ufpr
- */
+ *
 @Controller
 public class TarefaController {    
     @RequestMapping("/novaTarefa")
@@ -86,3 +86,4 @@ public class TarefaController {
     }
     
 }
+*/

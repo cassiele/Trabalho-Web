@@ -11,11 +11,12 @@ import javax.validation.constraints.Size;
 import org.springframework.format.annotation.DateTimeFormat;
 
 public class Tarefa {
-
+/*
     private Long id;
     
     @NotNull @Size(min=5)
     private String descricao;
+    private String comentarios;
     
     private boolean finalizado;
     
@@ -35,6 +36,14 @@ public class Tarefa {
         return descricao;
     }
 
+    public String getComentarios(){
+        return comentarios;
+    }
+    
+    public void setComentarios(String comentarios){
+        this.comentarios = comentarios;        
+    }
+    
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
@@ -54,5 +63,5 @@ public class Tarefa {
     public void setDataFinalizacao(Calendar dataFinalizacao) {
         this.dataFinalizacao = dataFinalizacao;
     }
-
+*/
 }
