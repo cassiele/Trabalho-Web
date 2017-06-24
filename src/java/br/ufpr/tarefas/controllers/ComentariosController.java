@@ -29,7 +29,7 @@ public class ComentariosController {
             return "comentario/formulario";
         }
         JdbcComentariosDao dao = new JdbcComentariosDao();
-        dao.adiciona(comentarios, );
+     //   dao.adiciona(comentarios, );
         return "comentario/adicionada";
     }
 }
